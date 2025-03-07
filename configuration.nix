@@ -65,6 +65,13 @@
     variant = "intl";
   };
 
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+
   # Configure console keymap
   console.keyMap = "us-acentos";
 
