@@ -23,6 +23,8 @@
       laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+	  ./laptop-hardware-configuration.nix
+
           # Import the previous configuration.nix we used,
           # so the old configuration file still takes effect
           ./configuration.nix
