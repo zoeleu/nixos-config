@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, zen-browser, ... }:
 
 {
   # TODO please change the username & home directory to your own
@@ -76,6 +76,10 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+
+    # apps
+    vesktop
+    zen-browser.packages."${system}".twilight
   ];
 
   # basic configuration of git, please change to your own

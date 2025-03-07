@@ -13,6 +13,8 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
@@ -33,6 +35,10 @@
             home-manager.useUserPackages = true;
 
             home-manager.users.zoe = import ./home.nix;
+
+            home-manager.specialArgs = {
+              zen-browser = zen-browser;
+            };
           }
         ];
       };
