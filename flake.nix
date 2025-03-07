@@ -40,6 +40,8 @@
               zen-browser = zen-browser;
             };
           }
+          
+          ./nvidia.nix
         ];
       };
     };
