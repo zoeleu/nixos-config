@@ -100,10 +100,12 @@
       kdePackages.kate
     #  thunderbird
     ];
+    shell = pkgs.fish;
   };
 
   # Install firefox.
   programs.firefox.enable = true;
+  programs.fish.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
