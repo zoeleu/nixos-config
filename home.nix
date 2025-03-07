@@ -81,6 +81,8 @@
     vesktop
     zen-browser.packages."${system}".twilight
     vscode
+
+    gh
   ];
 
   # basic configuration of git, please change to your own
