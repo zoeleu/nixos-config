@@ -17,7 +17,7 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, zen-browser, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
@@ -36,7 +36,7 @@
 
             home-manager.users.zoe = import ./home.nix;
 
-            home-manager.specialArgs = {
+            home-manager.extraSpecialArgs = {
               zen-browser = zen-browser;
             };
           }
