@@ -81,6 +81,7 @@
     vesktop
     zen-browser.packages."${system}".twilight
     vscode
+    spotify
 
     gh
   ];
@@ -93,6 +94,15 @@
     extraConfig = {
         init.defaultBranch = "main";
         safe.directory = "*";
+    };
+  };
+
+  programs = {
+    direnv = {
+      enable = true; # see note on other shells below
+      nix-direnv = {
+        enable = true;
+      };
     };
   };
 
